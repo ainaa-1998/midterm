@@ -2,13 +2,20 @@
 //! Parts of the code have been given. Complete the remaining.
 
 import 'package:flutter/material.dart';
+import 'package:midterm/models/note.dart';
 
 class MainScreen extends StatefulWidget {
+  final Note mockNoteList;
+  MainScreen(this.mockNoteList);
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
+  var change = new List(20);
+  bool signal = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
